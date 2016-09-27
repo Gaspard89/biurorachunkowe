@@ -1,0 +1,41 @@
+/*********************
+VARIABLES AND MIXINS
+*********************/
+
+$brand-color: #276462;
+$brand-background: #2c3339;
+$font-base-color: #333333;
+$font-light-color: #555555;
+$white: #ffffff;
+$light-gray: #f7f7f7;
+
+$base-font-size: 16px;
+$small-font-size: 12px;
+
+$brand-font: ;
+$base-font: 'Raleway', sans-serif;;
+$decoration-font: 'Playfair Display', serif;;
+
+h1 {
+  font-size: $base-font-size * 2;
+}
+
+
+/*********************
+BREAKPOINTS
+*********************/
+
+ @mixin breakpoint($point) {
+   @if $point == smallDesktop {
+     @media (max-width: 1250px) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (max-width: 940px) { @content ; }
+ }
+   @else if $point == phablet {
+     @media (max-width: 768px) { @content ; }
+  }
+  @else if $point == smallBreak {
+    @media (max-width: 680px) { @content ; }
+ }
+}
